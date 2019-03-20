@@ -1,0 +1,28 @@
+class resume
+{ 
+    public:
+   std::string name;   
+   std::string last_name;
+   int years;
+   int work_experience;
+   std::string skills;
+    void setYour(std::string Your_name, std::string Your_last_name)
+    {
+        name = Your_name;
+        last_name = Your_last_name;
+    }
+    void getYour()
+    {
+       cout << "Your name: " << name << " . " <<"Your last name: "<< last_name <<" . "<<endl;
+    }
+void setExp(int Exp_years, int Exp_work_experience, std::string Exp_skills)
+{
+    years = Exp_years;
+    work_experience = Exp_work_experience;
+    skills = Exp_skills;
+}
+void getExp()
+{
+    cout << "Exp: " << work_experience << " . " <<"Years: "<< years << " . " <<"Skills: "<< skills <<" . "<< endl;
+}
+};
