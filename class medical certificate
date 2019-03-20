@@ -1,0 +1,19 @@
+class medical_certificate
+{
+    public:
+    std::string health;
+    std::string allergy;
+    std::string body;
+    std::string any_problem;
+    void setLife(std::string Life_health,std::string Life_allergy,std::string Life_body,std::string Life_any_problem)
+    {
+      health = Life_health;
+      allergy = Life_allergy;
+      body = Life_body;
+      any_problem = Life_any_problem;
+    }
+    void getLife(){
+        cout<<"Medical Certificate. "<<"Health: "<< health <<" . "<<"Allergy: "<< allergy <<" . "<<"Body: "<< body << " . "<<"Any problem: "<< any_problem <<" . "<<endl;
+    }
+
+};
