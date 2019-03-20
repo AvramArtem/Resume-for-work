@@ -1,0 +1,105 @@
+int main()
+{
+    
+    int years, work_experience;
+    string name("Your_name");
+    string last_name("Your_last_name");
+    string skills("Exp_skills");
+    cout << "Your resume!\n";
+    cout<<"Name:";
+    cin>>name;
+    cout<<"Last Name:";
+    cin>>last_name;
+    cout<<"Skills:";
+    cin>>skills;
+    cout<<"Years:";
+    cin>>years;
+    cout<<"Work Experience:";
+    cin>> work_experience;
+    
+    string health("Life_health");
+    string allergy("Life_allergy");
+    string body("Life_body");
+    string any_problem("Life_any_problem");
+    cout<<"Medical Certificate!\n";
+    cout<<"Health:";
+    cin>>health;
+    cout<<"Allergy:";
+    cin>>allergy;
+    cout<<"Body:";
+    cin>>body;
+    cout<<"Any problem with health:";
+    cin>>any_problem;
+    
+    resume objresume;
+    objresume.setYour(name, last_name);
+    objresume.getYour();
+    objresume.setExp(years,work_experience, skills);
+    objresume.getExp();
+    
+    medical_certificate objmedical_certificate;
+    objmedical_certificate.setLife(health, allergy, body, any_problem);
+    objmedical_certificate.getLife();
+    
+    int sum_all=200;
+    double w;
+    double s;
+    double h;
+    double b;
+    double a;
+    double a_p;
+    
+    if( work_experience<=5 && work_experience>=0){
+        w=15;
+    }
+    if( work_experience<=10 && work_experience>=6){
+        w=35;
+    }
+    if( work_experience<=15 && work_experience>=11){
+        w=50;
+    }
+    
+    if(skills=="Bad"){
+        s=15;
+    }
+    if(skills=="Good"){
+        s=35;
+    }
+    if(skills=="Excellent"){
+        s=35;
+    }
+    
+    if(health=="Bad"){
+        h=15;
+    }
+    if(health=="Excellent"){
+        h=25;
+    }
+    
+    if(body=="Hoody"){
+        b=10;
+    }
+    if(body=="Strong"){
+        b=25;
+    }
+    
+    if(allergy=="Available"){
+        a=10;
+    }
+    if(allergy=="Missing"){
+        a=25;
+    }
+    
+    if(any_problem=="Available"){
+        a_p=5;
+    }
+    if(any_problem=="Missing"){
+        a_p=25;
+    }
+    
+    double analysis=((w+s+h+b+a+a_p)/sum_all)*100;
+    cout<<"You are approaching: "<<analysis<<"%"<<endl;
+    
+    system("pause");
+    return 0;
+    }
